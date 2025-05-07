@@ -1,10 +1,5 @@
-import dotenv from 'dotenv'
+const backendUri = import.meta.env.VITE_BACKEND_URI || "";
 
-dotenv.config()
+console.log(backendUri);
 
-
-  const  backendUri=process.env.BACKEND_URI
-
-console.log(backendUri)
-
-export default backendUri
+export default backendUri;

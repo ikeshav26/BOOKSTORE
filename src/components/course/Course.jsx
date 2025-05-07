@@ -1,18 +1,18 @@
-import React from 'react'
-import Navbar from '../Navbar'
-import Footer from '../Footer'
-import Courses from '../Courses'
+import React from "react";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import Courses from "../Courses";
 
 const Course = () => {
   return (
-    <div className='overflow-hidden'>
-      <Navbar/>
-      <div className='min-h-screen'>
-      <Courses/>
+    <div className="overflow-hidden">
+      <Navbar />
+      <div className="min-h-screen">
+        <Courses />
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Course
+export default Course;
