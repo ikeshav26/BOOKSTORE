@@ -74,7 +74,7 @@ const Banner = () => {
         <div className="w-full order-1 md:order-2 md:w-1/2 flex justify-center items-center">
           <img
             className="bg-cover mt-20 md:ml-10 w-[20em] h-[20em] md:w-[27em] md:h-[27em]"
-            src="../public/Banner.png"
+            src="/Banner.png"
           ></img>
         </div>
       </div>
