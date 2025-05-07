@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 
-export const backendUri=process.env.BACKEND_URI
+  const  backendUri=process.env.BACKEND_URI
 
 console.log(backendUri)
+
+export default backendUri
