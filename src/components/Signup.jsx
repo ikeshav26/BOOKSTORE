@@ -22,7 +22,7 @@ const Signup = () => {
       password: data.password,
     };
     await axios
-      .post(`${backendUri}/signup`, userInfo)
+      .post(`${backendUri}/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
