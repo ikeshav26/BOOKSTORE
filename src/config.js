@@ -1,10 +1,9 @@
-import dotenv from 'dotenv'
+const backendUri = import.meta.env.VITE_BACKEND_URI;
 
-dotenv.config()
-
-
-  const  backendUri=process.env.BACKEND_URI
-
-console.log(backendUri)
+if (!backendUri) {
+  console.error('Error: VITE_BACKEND_URI is not defined in the environment variables.');
+} else {
+  console.log(`Backend URI: ${backendUri}`);
+}
 
 export default backendUri

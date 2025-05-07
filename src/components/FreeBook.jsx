@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import Cards from './Cards';
 import axios from 'axios';
-
+import backendUri from '../config'
 
 const FreeBook = () => {
     
@@ -12,7 +12,7 @@ const FreeBook = () => {
   useEffect(() => {
     const getBook=async()=>{
       try{
-        const res =await axios.get("http://localhost:5000/book");
+        const res =await axios.get(`${backendUri}/book`);
         setbook(res.data);
       }catch(err){
         console.log(err);
