@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Cards from '../components/Cards'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import backnedUri from '../config'
 import Home from '../components/home/Home'
 
 const Courses = () => {
@@ -9,7 +10,7 @@ const Courses = () => {
   useEffect(() => {
     const getBook=async()=>{
       try{
-        const res =await axios.get("http://localhost:5000/book");
+        const res =await axios.get(`${backnedUri}/book`);
         console.log(res.data);
         setbook(res.data);
       }catch(err){

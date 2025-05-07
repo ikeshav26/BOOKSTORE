@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import backendUri from '../config'
 
 const Login = () => {
     const{
@@ -16,7 +17,7 @@ const Login = () => {
             email:data.email,
             password:data.password
         }
-        await axios.post("http://localhost:5000/user/login",userInfo)
+        await axios.post(`${backendUri}/user/login`,userInfo)
         .then((res)=>{
             if(res.data){
                 toast.success("Login successful",{autoClose:1000})

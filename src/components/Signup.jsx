@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import backendUri from "../config"
 
 const Signup = () => {
     const {
@@ -21,7 +22,7 @@ const Signup = () => {
             password: data.password,
         };
         await axios
-            .post("http://localhost:5000/signup", userInfo)
+            .post(`${backendUri}/signup`, userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {
